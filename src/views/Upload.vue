@@ -31,9 +31,9 @@ export default {
             this.formData.set('photo', this.file)
             console.log('THIS FORM DATA ========>',this.file)
 
-            axios.post('http://35.198.212.156/api/image', {
-                headers: { authorization: 'UjnphTXZCeJj1Rq3WVqs91'},
-                photo: this.formData
+            axios.post('http://35.198.212.156/api/image',
+                this.formData, {
+                headers: { authorization: 'UjnphTXZCeJj1Rq3WVqs91'}
             })
               .then(function (response) {
                   console.log(response)
